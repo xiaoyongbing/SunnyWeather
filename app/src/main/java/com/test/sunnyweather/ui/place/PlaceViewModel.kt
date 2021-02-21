@@ -13,6 +13,13 @@ import com.test.sunnyweather.login.model.Place
  * @description
  */
 class PlaceViewModel : ViewModel() {
+
+    fun savePlace(place: Place) = Repository.savePlace(place)
+
+    fun getSavePlace() = Repository.getSavedPlace()
+
+    fun isPlaceSaved() = Repository.isPlaceSaved()
+
     private val searchLiveData = MutableLiveData<String>()
 
     val placeList = ArrayList<Place>()
